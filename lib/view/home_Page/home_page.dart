@@ -136,23 +136,33 @@ class HomePage extends StatelessWidget {
                             child: Image.asset('assets/images/icons2.jpeg',fit: BoxFit.fill,),
                           ),
                           SizedBox(width: Adaptive.w(28),),
-                      SizedBox(
-                        height: Adaptive.h(5),
-                        child: const CircleAvatar(
-                            radius: 30,
-                            backgroundColor: textBlack,
-                          child:   CircleAvatar(
-                              backgroundColor: textWhite,
-                              radius: 17,
-                              child:  CircleAvatar(
-                                backgroundColor: textWhite,
-                                  backgroundImage: AssetImage("assets/images/icons3.jpeg"),
-                                  radius: 12,
+                     Stack(
+                            children: [
+                              CircleAvatar(
+                                radius: 21,
+                                backgroundColor: Colors.black,
+                                child: CircleAvatar(
+                                  radius: 18.3,
+                                  backgroundColor: Colors.white,
+                                  child: Image.asset('assets/images/icons3.jpeg',
+                                      width: Adaptive.w(8),
+                                      height: Adaptive.h(2.8)),
                                 ),
-                            ),
-                        ),
-                      ),
-                                 // sizedW10,
+                              ),
+                              Positioned(
+                                right: Adaptive.w(0.1),
+                                child: const CircleAvatar(
+                                  radius: 7.6,
+                                  backgroundColor: Colors.red,
+                                  child: CircleAvatar(
+                                    radius: 2,
+                                    backgroundColor: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                                  sizedW10,
                        SizedBox(
                         height: Adaptive.h(5),
                         child:const CircleAvatar(
@@ -173,7 +183,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SingleChildScrollView(child: StatusCircles()),
+                  StatusCircles(),
                 //  sizedBoxHeight10,
                  Padding(
                    padding: const EdgeInsets.all(10),
